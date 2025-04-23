@@ -57,9 +57,9 @@ BrGooseTheme >> header: anObject [
 { #category : #initialization }
 BrGooseTheme >> initialize [
 	super initialize.
-	link := BrGlamorousLinkTheme new.
+	link := BrGooseLinkTheme new.
 	status := BrGlamorousStatusTheme new.
-	default := BrGlamorousDefaultTheme new.
+	default := BrGooseDefaultTheme new.
 	editor := BrGlamorousEditorTheme new.
 	button := BrGlamorousButtonTheme new.
 	item := BrGlamorousItemTheme new.
