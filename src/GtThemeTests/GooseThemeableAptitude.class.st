@@ -12,23 +12,16 @@ Class {
 { #category : #accessing }
 GooseThemeableAptitude >> initialize [
 	super initialize.
-	
-	themeChangedEventHandler := BlEventHandler
-		on: BrThemeChanged
-		do: [
-			self addChangeProperty: #(widget background) with: [ widget theme default backdropColor ].
-			widget ifNotNil: [ self onUninstalledIn: widget ].
-			widget ifNotNil: [ self onInstalledIn: widget ].
-		].
-	
+
+	themeChangedEventHandler := BlEventHandler on: BrThemeChanged do: [  ].
+
 	self
-		addChange:
-			(BrLookChange new
-				up: [ :e |
-					widget
-						addEventHandler: themeChangedEventHandler ];
-				down: [ :e | 
-					widget
-						removeEventHandler: themeChangedEventHandler ];
+		addChange: (BrLookChange new
+				up: [ :e | 
+					widget children
+						do: [ :each | 
+							each aptitudeDo: [ :a | a clearCache ].
+							each requestStyle ] ];
+				down: [  "widget removeEventHandler: themeChangedEventHandler":e |  ];
 				yourself)
 ]

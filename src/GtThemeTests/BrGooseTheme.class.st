@@ -8,8 +8,7 @@ Class {
 		'editor',
 		'button',
 		'item',
-		'header',
-		'propertiesById'
+		'header'
 	],
 	#category : #'GtThemeTests-Glamorous'
 }
@@ -58,14 +57,12 @@ BrGooseTheme >> header: anObject [
 BrGooseTheme >> initialize [
 	super initialize.
 	link := BrGooseLinkTheme new.
-	status := BrGlamorousStatusTheme new.
+	status := BrGooseStatusTheme new.
 	default := BrGooseDefaultTheme new.
 	editor := BrGooseEditorTheme new.
 	button := BrGooseButtonTheme new.
 	item := BrGooseItemTheme new.
 	header := BrGooseHeaderTheme new.
-	
-	propertiesById := OrderedDictionary new.
 ]
 
 { #category : #accessing }
