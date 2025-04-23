@@ -90,18 +90,18 @@ BrGooseDefaultTheme >> expandCollapseTriangleBackgroundColor: anObject [
 { #category : #initialization }
 BrGooseDefaultTheme >> initialize [
 	super initialize.
-	contentBackgroundColor := Color blue.
-	defaultShadowColor := BrGlamorousColors selectedListItemColor.
-	backdropColor := Color green.
-	primaryBorderColor := BrGlamorousColors primaryBorderColor.
-	darkBorderColor := BrGlamorousColors darkBorderColor.
-	distinctTenStrongColors := BrGlamorousColors distinctTenStrongColors.
-	newsBackgroundColor := BrGlamorousColors newsBackgroundColor.
-	lightBorderColor := BrGlamorousColors lightBorderColor.
-	expandCollapseTriangleBackgroundColor := BrGlamorousColors
+	contentBackgroundColor := BrNordColors defaultListItemColor.
+	defaultShadowColor := BrNordColors selectedListItemColor.
+	backdropColor := BrNordColors backdropColor.
+	primaryBorderColor := BrNordColors primaryBorderColor.
+	darkBorderColor := BrNordColors darkBorderColor.
+	distinctTenStrongColors := BrNordColors distinctTenStrongColors.
+	newsBackgroundColor := BrNordColors newsBackgroundColor.
+	lightBorderColor := BrNordColors lightBorderColor.
+	expandCollapseTriangleBackgroundColor := BrNordColors
 		expandCollapseTriangleBackgroundColor.
-	shadowColor := BrGlamorousColors shadowColor.
-	distinctTenLightColors := BrGlamorousColors distinctTenLightColors
+	shadowColor := BrNordColors shadowColor.
+	distinctTenLightColors := BrNordColors distinctTenLightColors
 ]
 
 { #category : #accessing }

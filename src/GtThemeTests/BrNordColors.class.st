@@ -368,10 +368,10 @@ BrNordColors class >> hoveredListItemColor: aColor [
 
 { #category : #initialization }
 BrNordColors class >> initialize [
-	LightBorderColor := Color fromHexString: #d9d9d9.
-	DarkBorderColor := Color darkGray.
-	PrimaryBorderColor := Color fromHexString: #'45abfe'.
-	ActiveColor := Color fromHexString: #'096dd9'.
+	LightBorderColor := (NordColors polarNight: 4).
+	DarkBorderColor := (NordColors aurora: 4) darker.
+	PrimaryBorderColor := (NordColors frost: 2) darker.
+	ActiveColor := NordColors frost: 2.
 
 	"buttons - border"
 	ButtonBorderColor := LightBorderColor.
@@ -380,66 +380,66 @@ BrNordColors class >> initialize [
 	DisabledButtonBorderColor := LightBorderColor.
 
 	"status - border"
-	SuccessBorderColor := Color fromHexString: #'389e0d' "green-7".
-	ErrorBorderColor := Color fromHexString: #'cf1322' "red-7".
-	FailureBorderColor := Color fromHexString: #'d48806' "gold-7".
+	SuccessBorderColor := (NordColors aurora: 4).
+	ErrorBorderColor := (NordColors aurora: 1) darker.
+	FailureBorderColor := (NordColors aurora: 2).
 
 	"buttons - background"
-	ButtonBackgroundColor := Color white.
-	DisabledButtonBackgroundColor := Color fromHexString: #f5f5f5 "grey-3".
-	FadedBackgroundColor := Color fromHexString: #'d9d9d9' "gray-5".
+	ButtonBackgroundColor := ((NordColors polarNight: 4) lighter).
+	DisabledButtonBackgroundColor := (NordColors snowStorm: 1).
+	FadedBackgroundColor := (NordColors snowStorm: 1).
 
 	"status - background"
-	PaleErrorBackgroundColor := Color fromHexString: #'#ffccc7' "red-2".
-	PaleFailureBackgroundColor := Color fromHexString: #fff1b8 "gold-2".
+	PaleErrorBackgroundColor := (NordColors aurora: 1) lighter.
+	PaleFailureBackgroundColor := (NordColors aurora: 4) lighter.
 	PaleSuccessBackgroundColor := Color fromHexString: #d9f7be "green-2".
-	ErrorBackgroundColor := Color fromHexString: #ff7875 "red-4".
+	ErrorBackgroundColor :=  NordColors aurora: 1.
 	SuccessBackgroundColor := Color fromHexString: #'95de64' "green-4".
 	FailureBackgroundColor := Color fromHexString: #ffd666 "gold-4".
 	NeutralBackgroundColor := Color fromHexString: #'f0f0f0' "gray-4".
 	NewsBackgroundColor := Color fromHexString: #'fff1b8' "gold-2".
 	
 	"buttons - text"
-	ButtonTextColor := Color black alpha: 0.65.
+	ButtonTextColor := NordColors snowStorm: 2.
 	HoveredButtonTextColor := PrimaryBorderColor.
 	PressedButtonTextColor := ActiveColor.
-	DisabledButtonTextColor := Color black alpha: 0.25.
-	FadedTextColor := Color gray.
+	DisabledButtonTextColor := (NordColors snowStorm: 3) lighter.
+	FadedTextColor := (NordColors snowStorm: 3) lighter.
 
 	"background"
-	BackdropColor := Color r: 240 g: 240 b: 240 range: 255.
-	ShadowColor := Color r: 200 g: 200 b: 200 range: 255.
+	BackdropColor := NordColors polarNight: 1.
+	ShadowColor := NordColors polarNight: 4.
 	
 	"header - background"
-	HeaderBackgroundColor := Color fromHexString: #'d9d9d9'. "grey-5"
-	SecondaryHeaderBackgroundColor := Color fromHexString: #'e8e8e8'. "grey-6"
+	HeaderBackgroundColor := NordColors polarNight: 2. "grey-5"
+	SecondaryHeaderBackgroundColor := NordColors polarNight: 3. "grey-6"
 	
 	"header - text"
-	HeaderTextColor := Color black alpha: 0.85.
-	DisabledHeaderTextColor := Color black alpha: 0.25.
+	HeaderTextColor := NordColors snowStorm: 2.
+	DisabledHeaderTextColor := DisabledButtonTextColor.
 	
 	"highlighting - text"
-	TextHighlightColor := Color fromHexString: #ffd666.
-	TextMarkupColor := Color black alpha: 0.6.
+	TextHighlightColor := NordColors aurora: 3.
+	TextMarkupColor := NordColors snowStorm: 2.
 	DebuggerTextHighlightColor := TextHighlightColor alpha: 0.6.
 	 
 	"list and tree items"
-	DeselectedListItemBackgroundColor := Color transparent.
+	DeselectedListItemBackgroundColor := BackdropColor.
 	HoveredListItemBackgroundColor := Color gray alpha: 0.1.
-	SelectedListItemBackgroundColor := (Color fromHexString: #'69ABFD') alpha: 0.34.
-	PressedListItemBackgroundColor := Color gray alpha: 0.2. 
-	ExpandCollapseTriangleBackgroundColor := Color fromHexString: #'d9d9d9'. "grey-5"
+	SelectedListItemBackgroundColor := (ActiveColor) alpha: 0.34.
+	PressedListItemBackgroundColor := DarkBorderColor alpha: 0.2. 
+	ExpandCollapseTriangleBackgroundColor := NordColors frost: 1.
 
 	"editors"
 	EditorBorderColor := LightBorderColor.
 	FocusedEditorBorderColor := PrimaryBorderColor.
 	
 	"forms"
-	FormLabelTextColor := Color gray.
+	FormLabelTextColor := NordColors snowStorm: 2.
 	
 	"others"
-	LinkColor := Color fromHexString: #'096dd9'.
-	LinkWithErrorColor := Color fromHexString: #cf1322.
+	LinkColor :=  NordColors frost: 2.
+	LinkWithErrorColor :=  NordColors aurora: 1.
 ]
 
 { #category : #'changes - diff' }
