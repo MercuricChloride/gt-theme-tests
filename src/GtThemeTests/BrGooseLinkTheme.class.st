@@ -31,6 +31,6 @@ BrGooseLinkTheme >> errorColor: anObject [
 { #category : #initialization }
 BrGooseLinkTheme >> initialize [
 	super initialize.
-	color := BrGlamorousColors linkColor.
-	errorColor := BrGlamorousColors linkWithErrorColor
+	color := BrGooseColors linkColor.
+	errorColor := BrGooseColors linkWithErrorColor
 ]

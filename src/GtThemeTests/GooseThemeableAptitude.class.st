@@ -17,6 +17,8 @@ GooseThemeableAptitude >> initialize [
 		on: BrThemeChanged
 		do: [
 			self addChangeProperty: #(widget background) with: [ widget theme default backdropColor ].
+			widget ifNotNil: [ self onUninstalledIn: widget ].
+			widget ifNotNil: [ self onInstalledIn: widget ].
 		].
 	
 	self
@@ -27,6 +29,6 @@ GooseThemeableAptitude >> initialize [
 						addEventHandler: themeChangedEventHandler ];
 				down: [ :e | 
 					widget
-						removeEventHandler: addedToSceneGraphEventHandler ];
+						removeEventHandler: themeChangedEventHandler ];
 				yourself)
 ]

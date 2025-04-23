@@ -60,10 +60,10 @@ BrGooseTheme >> initialize [
 	link := BrGooseLinkTheme new.
 	status := BrGlamorousStatusTheme new.
 	default := BrGooseDefaultTheme new.
-	editor := BrGlamorousEditorTheme new.
-	button := BrGlamorousButtonTheme new.
-	item := BrGlamorousItemTheme new.
-	header := BrGlamorousHeaderTheme new.
+	editor := BrGooseEditorTheme new.
+	button := BrGooseButtonTheme new.
+	item := BrGooseItemTheme new.
+	header := BrGooseHeaderTheme new.
 	
 	propertiesById := OrderedDictionary new.
 ]
