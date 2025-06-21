@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseDefaultTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'defaultShadowColor',
 		'backdropColor',
@@ -17,6 +17,16 @@ Class {
 	#category : #'GtThemeTests-Glamorous'
 }
 
+{ #category : #'as yet unclassified' }
+BrGooseDefaultTheme >> appBackground [
+	^ self backdropColor
+]
+
+{ #category : #'as yet unclassified' }
+BrGooseDefaultTheme >> backdropBackground [
+	^ self contentBackgroundColor
+]
+
 { #category : #accessing }
 BrGooseDefaultTheme >> backdropColor [
 	^ backdropColor
@@ -25,6 +35,11 @@ BrGooseDefaultTheme >> backdropColor [
 { #category : #accessing }
 BrGooseDefaultTheme >> backdropColor: anObject [
 	backdropColor := anObject
+]
+
+{ #category : #'as yet unclassified' }
+BrGooseDefaultTheme >> contentBackground [
+	^ self contentBackgroundColor
 ]
 
 { #category : #accessing }

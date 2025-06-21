@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseButtonTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'disabledBackgroundColor',
 		'disabledTextColor',
@@ -18,6 +18,11 @@ Class {
 	],
 	#category : #'GtThemeTests-Glamorous'
 }
+
+{ #category : #'as yet unclassified' }
+BrGooseButtonTheme >> defaultBackground [
+	^ self defaultBackgroundColor
+]
 
 { #category : #accessing }
 BrGooseButtonTheme >> defaultBackgroundColor [
@@ -47,6 +52,11 @@ BrGooseButtonTheme >> defaultTextColor [
 { #category : #accessing }
 BrGooseButtonTheme >> defaultTextColor: anObject [
 	defaultTextColor := anObject
+]
+
+{ #category : #'as yet unclassified' }
+BrGooseButtonTheme >> defaultTextForeground [
+	^ self defaultTextColor
 ]
 
 { #category : #accessing }

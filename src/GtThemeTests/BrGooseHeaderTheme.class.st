@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseHeaderTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'textMarkupColor',
 		'defaultBackgroundColor',

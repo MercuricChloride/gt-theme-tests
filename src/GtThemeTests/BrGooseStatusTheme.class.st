@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseStatusTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'successBackgroundColor',
 		'successBorderColor',

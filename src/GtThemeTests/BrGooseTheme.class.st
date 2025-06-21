@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'link',
 		'status',
@@ -8,7 +8,8 @@ Class {
 		'editor',
 		'button',
 		'item',
-		'header'
+		'header',
+		'label'
 	],
 	#category : #'GtThemeTests-Glamorous'
 }
@@ -21,6 +22,11 @@ BrGooseTheme >> button [
 { #category : #accessing }
 BrGooseTheme >> button: anObject [
 	button := anObject
+]
+
+{ #category : #'as yet unclassified' }
+BrGooseTheme >> canBeDefault [
+	^ true
 ]
 
 { #category : #accessing }
@@ -63,6 +69,8 @@ BrGooseTheme >> initialize [
 	button := BrGooseButtonTheme new.
 	item := BrGooseItemTheme new.
 	header := BrGooseHeaderTheme new.
+	label := BrGlamorousLabelTheme theme: self.
+	label initializeThemeable.
 ]
 
 { #category : #accessing }
@@ -73,6 +81,16 @@ BrGooseTheme >> item [
 { #category : #accessing }
 BrGooseTheme >> item: anObject [
 	item := anObject
+]
+
+{ #category : #accessing }
+BrGooseTheme >> label [
+	^ label
+]
+
+{ #category : #accessing }
+BrGooseTheme >> label: anObject [
+	label := anObject
 ]
 
 { #category : #accessing }

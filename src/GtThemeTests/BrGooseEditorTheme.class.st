@@ -1,6 +1,6 @@
 Class {
 	#name : #BrGooseEditorTheme,
-	#superclass : #BrTheme,
+	#superclass : #BlTheme,
 	#instVars : [
 		'borderColor',
 		'focusedBorderColor'
@@ -16,6 +16,11 @@ BrGooseEditorTheme >> borderColor [
 { #category : #accessing }
 BrGooseEditorTheme >> borderColor: anObject [
 	borderColor := anObject
+]
+
+{ #category : #'as yet unclassified' }
+BrGooseEditorTheme >> defaultTextForeground [
+	^ NordColors frost: 3
 ]
 
 { #category : #accessing }
