@@ -54,8 +54,8 @@ BrGlamorousItemNordTheme >> hoveredColor: anObject [
 
 { #category : #initialization }
 BrGlamorousItemNordTheme >> initialize [
-	"super initialize.
-	selectedColor := BrGlamorousColors selectedListItemColor.
+	super initialize.
+	"selectedColor := BrGlamorousColors selectedListItemColor.
 	deselectedColor := BrGlamorousColors deselectedListItemColor.
 	hoveredColor := BrGlamorousColors hoveredListItemColor.
 	defaultColor := BrGlamorousColors defaultListItemColor.
@@ -78,7 +78,6 @@ BrGlamorousItemNordTheme >> initializeColors [
 { #category : #'as yet unclassified' }
 BrGlamorousItemNordTheme >> initializeConstants [
 	super initializeConstants.
-	
 	"Item state colors"
 	self constantAt: #selectedColor put: (NordColors frost: 3).  "#81A1C1 - selected items"
 	self constantAt: #deselectedColor put: Color transparent.  "No background when deselected"

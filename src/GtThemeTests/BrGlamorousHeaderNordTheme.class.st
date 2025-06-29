@@ -7,22 +7,34 @@ Class {
 { #category : #initialization }
 BrGlamorousHeaderNordTheme >> initializeColors [
 	super initializeColors.
-	defaultBackgroundColor := NordColors polarNight: 2.  "#3B4252 - raised surface"
-	disabledTextColor := NordColors polarNight: 4.  "#4C566A - very subtle"
-	defaultTextColor := NordColors snowStorm: 3.  "#ECEFF4 - bright text"
-	secondaryBackgroundColor := NordColors polarNight: 1.  "#2E3440 - darkest"
+
+	disabledTextColor := NordColors polarNight: 4.
+	defaultTextColor := NordColors snowStorm: 3.
+	defaultBackgroundColor := NordColors polarNight: 2.
 ]
 
 { #category : #initialization }
 BrGlamorousHeaderNordTheme >> initializeConstants [
 	super initializeConstants.
-	self constantAt: #textMarkupColor put: (NordColors frost: 1)  "#8FBCBB - subtle accent"
+
+	self constantAt: #textMarkupColor put: (NordColors frost: 1).
+	self constantAt: #secondaryBackgroundColor put: (NordColors polarNight: 1).
+	self constantAt: #defaultBackgroundColor put: (NordColors polarNight: 2).
 ]
 
 { #category : #initialization }
 BrGlamorousHeaderNordTheme >> initializeThemeable [
 	super initializeThemeable.
+
 	textMarkupColor := self
-		color: [ :aTheme | aTheme header constantAt: #textMarkupColor ]
-		source: [ :aTheme | aTheme header textMarkupColor ].
+			color: [ :aTheme | aTheme header constantAt: #textMarkupColor ]
+			source: [ :aTheme | aTheme header textMarkupColor ].
+
+	defaultBackgroundColor := self
+			color: [ :aTheme | aTheme header constantAt: #defaultBackgroundColor ]
+			source: [ :aTheme | aTheme header defaultBackgroundColor ].
+
+	secondaryBackgroundColor := self
+			color: [ :aTheme | aTheme header constantAt: #secondaryBackgroundColor ]
+			source: [ :aTheme | aTheme header secondaryBackgroundColor ]
 ]

@@ -46,7 +46,6 @@ BrGlamorousLinkNordTheme >> initializeColors [
 BrGlamorousLinkNordTheme >> initializeConstants [
 	super initializeConstants.
 	
-	"Link colors"
 	self constantAt: #color put: (NordColors frost: 2).  "#88C0D0 - light blue for links"
 	self constantAt: #errorColor put: (NordColors aurora: 1)  "#BF616A - red for error links"
 ]
